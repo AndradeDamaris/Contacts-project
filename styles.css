@@ -1,0 +1,161 @@
+root: {
+  --insta-color-1: #f29f05;
+  --insta-color-2: #f20587;
+  --insta-color-3: #960cf2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 90%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  width: 80%;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+
+li {
+  width: 115px;
+  height: 155px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  visibility: hidden;
+  opacity: 0;
+  padding: 8px;
+  color: white;
+  font: bold 1.2em Arial, sans-serif;
+  transition: 0.6s ease;
+}
+
+a {
+  outline: none;
+  color: grey;
+  text-decoration: none;
+}
+
+.icons {
+  position: relative;
+  z-index: 1;
+  font-size: 4.2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.6s ease;
+}
+
+.icon-fill {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.icon-full {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: 0.6s ease;
+  color: white;
+}
+
+li:hover p {
+  visibility: visible;
+  opacity: 1;
+  text-shadow: 0 0 15px #ffffffdb;
+}
+
+.insta-full {
+  background-image: linear-gradient(to top, #f29f05, #f20587, #960cf2);
+}
+
+.insta-fill:hover .insta-full {
+  transform: translatey(0);
+  opacity: 1;
+}
+
+li:hover .icons {
+  color: white;
+}
+
+li:hover .insta-fill {
+  box-shadow: 0 0 10px #f20587cf, 0 0 20px #f29f05b5, 0 0 30px #960cf2c5;
+}
+
+/* li:hover .icon-fill {
+  border-style: solid;
+  border-color: white;
+  border-width: 0.01px;
+} */
+
+.git-full {
+  background-color: #090925;
+}
+
+.git-fill:hover .git-full {
+  transform: translatey(0);
+  opacity: 1;
+}
+
+li:hover .git-fill {
+  box-shadow: 0 0 30px white;
+}
+
+.youtube-full {
+  background-color: #f20505;
+}
+
+.youtube-fill:hover .youtube-full {
+  transform: translatey(0);
+  opacity: 1;
+}
+
+li:hover .youtube-fill {
+  box-shadow: 0 0 30px #fe1818;
+}
+
+.linkedin-full {
+  background-color: #0a66c2;
+}
+
+.linkedin-fill:hover .linkedin-full {
+  transform: translatey(0);
+  opacity: 1;
+}
+
+li:hover .linkedin-fill {
+  box-shadow: 0 0 30px #0d78e2;
+}
